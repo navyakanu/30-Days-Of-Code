@@ -5,9 +5,9 @@ class Student(Person):
 
     def calculate(self):
         avg=0.0
-        for score in scores:
+        for score in self.scores:
             avg += score
-        avg = avg/len(scores)
+        avg = avg/len(self.scores)
         if (avg<40):
             return 'T'
         elif (avg<55):

@@ -1,14 +1,16 @@
-n = int(raw_input())
-phonebook = {}
+n = int(input())
+phone_book = {}
 for i in range(0,n):
-    name, id = raw_input().split()
-    phonebook[name] = id
-while (1):
+    print("Enter the name and number to add to phone book in the format name number")
+    name, id = input().split()
+    phone_book[name] = id
+while 1:
     temp = ''
-    name = raw_input()
-    if (name == temp):
+    print("Enter the name to search number for")
+    name = input()
+    if name == temp:
         break
-    if(phonebook.has_key(name)):
-        print name + "=" + phonebook[name]
+    if name in phone_book:
+        print("Found" + name + "=" + phone_book[name])
     else:
-        print "Not found"
+        print("Not found")
